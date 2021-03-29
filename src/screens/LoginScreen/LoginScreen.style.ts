@@ -10,68 +10,66 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center'
   },
-  header:{
+  header: {
     flexDirection: 'row',
     alignItems: 'center',
     marginLeft: '-45%'
 
   },
-  ic_back:{
-    transform:[{scale: 0.3}],
+  ic_back: {
+    transform: [{ scale: 0.2 }],
     tintColor: 'white'
   },
-  txtHeader:{
-    marginLeft: '20%', 
+  txtHeader: {
+    marginLeft: '20%',
     fontSize: 20,
     fontWeight: "bold"
   },
-  signinContainer:{
+  signinContainer: {
     width: "95%",
-    display:'flex',
     flexDirection: 'column',
     backgroundColor: 'white',
     marginBottom: '5%',
     borderRadius: 10,
     padding: 10,
   },
-  signinFB:{
-    display: "flex",
-    flexDirection:'row',
+  signinFB: {
+    flexDirection: 'row',
     justifyContent: "center",
-    alignItems:'center',
+    alignItems: 'center',
     backgroundColor: '#4267B2',
     paddingTop: 15,
     paddingBottom: 15,
     borderRadius: 5,
   },
-  ic_fb:{
+  ic_fb: {
     width: 20,
     height: 20,
     marginRight: 10
   },
-  txtInput:{
+  txtInput: {
     borderWidth: 1,
     borderColor: "#ddd",
     marginTop: 15,
     borderRadius: 5,
-
+    marginBottom: 15
   },
-  inputEmail:{
+  inputEmail: {
     borderBottomColor: '#ddd',
     borderBottomWidth: 1
   },
-  btnSignIn:{
+  btnSignIn: {
     backgroundColor: "#4CDA64",
     paddingTop: 15,
     paddingBottom: 15,
     alignItems: 'center',
     borderRadius: 5
   },
-  txt:{
+  txt: {
     color: 'white',
     fontSize: 18
   },
-  forgotPass:{
+  forgotPass: {
     color: "#2DA2D6",
     fontSize: 16,
     textAlign: "center",

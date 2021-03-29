@@ -1,28 +1,26 @@
+import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
-import {Text, View, Image, ScrollView} from 'react-native';
-import {IC_MENU, IC_SEARCH} from '../../assets';
-import styles from './HomeScreen.style';
+import { View } from 'react-native';
+import CategoryBreakfastStack from '../../components/CategoryBreakfastStack';
 import CategoryHome from '../../components/CategoryHome';
+import CategoryCoffeeScreen from '../../screens/CategoryCoffeeScreen';
 
-interface Props {
-  navigation: any;
-}
+const Stack = createStackNavigator();
 
-const HomeScreen = (props: Props) => {
-  const Header = () => {
-    return (
-      <View style={styles.header}>
-        <Image source={IC_MENU} style={styles.icMenu} />
-        <Text style={styles.txtMenu}>Menu</Text>
-        <Image source={IC_SEARCH} style={styles.icSearch} />
-      </View>
-    );
-  };
-
+const HomeScreen = () => {
   return (
-    <View style={{height: '100%'}}>
-      <Header />
-      <CategoryHome navigation />
+    <View style={{ height: '100%' }}>
+      <Stack.Navigator initialRouteName="CategoryHome" headerMode="none">
+        <Stack.Screen name="CategoryHome" component={CategoryHome} />
+        <Stack.Screen
+          name="CategoryCoffeeScreen"
+          component={CategoryCoffeeScreen}
+        />
+        <Stack.Screen
+          name="CategoryBreakfastStack"
+          component={CategoryBreakfastStack}
+        />
+      </Stack.Navigator>
     </View>
   );
 };

@@ -13,36 +13,36 @@ const category = [
     name: 'Breakfast',
     image: MENU_BREAKFAST,
     desc: 'Hearty, hot & Fresh',
-    destination:'CategoryBreakfastScreen'
+    destination: 'CategoryBreakfastStack'
   },
   {
     id: 3,
     name: 'Munchies',
     image: MENU_MUNCHIES,
     desc: 'Perfectly Baked Goodies',
-    destination:'CategoryMunchiesScreen'
+    destination: 'CategoryMunchiesScreen'
   },
   {
     id: 4,
     name: 'Lunch',
     image: MENU_LUNCH,
     desc: 'Hearty, hot & Fresh',
-    destination:'CategoryLunchScreen'
+    destination: 'CategoryLunchScreen'
   },
   {
     id: 5,
     name: 'Fries',
     image: MENU_FRIES,
     desc: 'Fresh & Crispy',
-    destination:'CategoryFriesScreen'
+    destination: 'CategoryFriesScreen'
   },
   {
     id: 6,
     name: 'Drinks',
     image: MENU_DRINK,
     desc: 'Heathy & Fresh',
-    destination:'CategoryDrinkScreen'
+    destination: 'CategoryDrinkScreen'
   },
 ];
 
-export {category}
+export { category }

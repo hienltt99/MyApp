@@ -22,13 +22,13 @@ const LoginScreen = (props: Props) => {
     password: '',
   });
 
-  const changeEmail = (value: any) => setUser({...user, email: value});
-  const changePassword = (value: any) => setUser({...user, password: value});
+  const changeEmail = (value: string) => setUser({...user, email: value});
+  const changePassword = (value: string) => setUser({...user, password: value});
 
   const handleSubmitSignIn = (e: any) => {
     e.preventDefault();
     if (user.email == 'admin' && user.password == '123') {
-      navigation.navigate('HomeScreen');
+      navigation.navigate('HomeStack');
       console.log('ok');
     } else {
       console.log(user);
@@ -73,7 +73,10 @@ const LoginScreen = (props: Props) => {
             <Text style={styles.txt}>Sign In</Text>
           </TouchableOpacity>
 
-          <Text style={styles.forgotPass}>Forgot your password?</Text>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('ForgotpassScreen')}>
+            <Text style={styles.forgotPass}>Forgot your password?</Text>
+          </TouchableOpacity>
         </View>
       </ImageBackground>
     </View>

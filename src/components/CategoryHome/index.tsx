@@ -1,14 +1,28 @@
 import * as React from 'react';
-import {Text, View, FlatList, Image, TouchableOpacity} from 'react-native';
-import {category} from '../../mocks';
+import { Text, View, FlatList, Image, TouchableOpacity } from 'react-native';
+import { category } from '../../mocks';
+import { IC_MENU, IC_SEARCH } from '../../assets';
 import styles from './CategoryHome.style';
+import { DrawerActions } from '@react-navigation/native';
 
 interface Props {
   navigation: any;
 }
 
 const CategoryHome = (props: Props) => {
-  const {navigation} = props;
+  const { navigation } = props;
+  const Header = () => {
+    return (
+      <View style={styles.header}>
+        <TouchableOpacity onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
+          <Image source={IC_MENU} style={styles.icMenu} />
+        </TouchableOpacity>
+        <Text style={styles.txtMenu}>Menu</Text>
+        <Image source={IC_SEARCH} style={styles.icSearch} />
+      </View>
+    );
+  };
+
   const renderItem = (item: any) => {
     return (
       <TouchableOpacity
@@ -21,14 +35,18 @@ const CategoryHome = (props: Props) => {
     );
   };
   return (
-    <View style={styles.category}>
-      <FlatList
-        data={category}
-        numColumns={2}
-        renderItem={({item}) => renderItem(item)}
-        keyExtractor={(item: any) => item.id}
-      />
+    <View>
+      <Header />
+      <View style={styles.category}>
+        <FlatList
+          data={category}
+          numColumns={2}
+          renderItem={({ item }) => renderItem(item)}
+          keyExtractor={(item: any) => item.id}
+        />
+      </View>
     </View>
+
   );
 };
 
